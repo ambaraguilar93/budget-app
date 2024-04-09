@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #f7f9fd;
+    background-color: #222831;
     width: 90%;
     font-size: 16px;
     max-width: 43.753m;
@@ -39,15 +39,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    
+  
 }
-
 
 .container input{
     display: block;
     width: 100%;
-    padding: 0.6em 0.3em;
+    padding: 1.25em 1em;
     border: 1px solid #d0d0d0;
     border-radius: 0.3em;
     color: #414a67;
@@ -60,17 +58,17 @@ body{
     border-color: #587ef4;
 }
 
+
 .total-amount-container, .user-amount-container{
-    background: #fff;
-    padding: 1.25em 0.9em;
+    background: #76ABAE;
+    padding: 1.25em 1em;
     border-radius: 0.3em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
 }
 
 .output-container{
-    margin-top: 20px;
     width: 100%;
-    background-color: #587ef4;
+    background-color: #31363F;
     color: #fff;
     border-radius: 0.3em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
@@ -100,7 +98,7 @@ body{
 .submit{
     font-size: 1em;
     margin-top: 0.8em;
-    background-color: #587ef4;
+    background-color: #31363F;
     border: none;
     outline: none;
     color: #fff;
@@ -110,9 +108,14 @@ body{
     
 }
 
+.submit:hover{
+    background-color: #222831;
+    transition: background-color 0.5s;
+}
+
 .list{
     margin-top: 20px;
-    background-color: #d3d3d3;
+    background-color: #EEEEEE;
     padding: 1.8em 1.2em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
     border-radius: 0.6em;
@@ -154,7 +157,8 @@ body{
     display: none;
 }
 
-.error{
+#errorMessage{
+    padding-top: 0.6em;
     color: #ff465a;
 }
 

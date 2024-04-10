@@ -52,6 +52,21 @@ export const BudgetApp = () => {
     setUserAmount('');
   };
 
+  const handleDeleteExpense = (index) => {
+    const expensesListUpdated = [...expensesList];
+    const valorResta = expensesListUpdated[index].amount;
+    
+    expensesListUpdated.splice(index, 1);
+    setExpensesList(expensesListUpdated);
+
+    const totalGastoFinal = expenditureValue - valorResta;
+    const totalBalance = balanceValue + valorResta;
+    
+    setExpenditureValue(totalGastoFinal);
+    setBalanceValue(totalBalance);
+    
+  }
+
   return (
  
     <div className="container">
@@ -110,19 +125,25 @@ export const BudgetApp = () => {
             <div className="list">
                 <h3>Lista de gastos</h3>
                 <div className="sublist-content" id="list">
-                    <ul>
-                        {expensesList.map((expense, index) => (
-                        <li key={index}>
-                            {expense.product} - {expense.amount}
-                        </li>
-                        ))}
-                        
-                    </ul>
-                </div>
-            </div>
+                    
+                        <ul>
+                            {expensesList.map((expense, index) => (
 
-    </div>
+                            <li key={index} id='lista-producto'>
+                                {expense.product} 
+                                <span id='lista-valor'> {expense.amount} </span>
 
+                                <button onClick={() => handleDeleteExpense(index)} className='submit' id='eliminar'>Eliminar</button>
+                                <button className='submit' id='modificar'>Modificar</button>
+
+                            </li>
+
+                            ))}
+
+                        </ul>
+                </div>                   
+            </div>  
+        </div>                        
     
     
   );

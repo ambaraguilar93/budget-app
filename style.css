@@ -17,8 +17,7 @@ body{
 
 .container{
     width: 100%;
-    display: grid;
-    
+    display: grid;   
 }
 
 .sub-container{
@@ -38,8 +37,7 @@ body{
 .flex-space{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  
+    align-items: center;  
 }
 
 .container input{
@@ -73,15 +71,12 @@ body{
     border-radius: 0.3em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
     /* margin: 2em 0; */
-    padding: 1.2em;
-    
-    
+    padding: 1.2em;   
 }
 
 .output-container p{
     font-weight: 500;
     margin-bottom: 0.6em;
-    
     
 }
 
@@ -89,23 +84,18 @@ body{
     display: block;
     text-align: center;
     font-weight: 400;
-    color: #e5e5e5;
-    
-    
+    color: #e5e5e5;   
 }
-
 
 .submit{
     font-size: 1em;
     margin-top: 0.8em;
     background-color: #31363F;
     border: none;
-    outline: none;
     color: #fff;
     padding: 0.6em 1.2em;
     border-radius: 0.3em;
     cursor: pointer;
-    
 }
 
 .submit:hover{
@@ -119,34 +109,35 @@ body{
     padding: 1.8em 1.2em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
     border-radius: 0.6em;
-    
+    padding-top: 10px;
 }
 
-.sublist-content{
-    width: 100%;
-    border-left: 0.3em;
-    margin-bottom: 0.6em;
-    padding: 0.5em 1em;
+.sublist-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ul{
+    display: flex;
+} */
+
+#lista-producto, #lista-valor {
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr 1fr;
-    
-    
-}
-
-.product{
-    font-weight: 500;
-    color: #363d55;
-}
-
-.amount{
-    color: #414a67;
-    margin-left: 20%;
-}
-
-.icons-container{
-    width: 5em;
-    margin: 1.2em;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+#eliminar, #modificar {
+    margin-left: 2em; /* Mueve los botones a la derecha */
+    
+}
+
+#lista-producto:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para resaltar filas */
 }
 
 .product-title{
@@ -160,18 +151,6 @@ body{
 #errorMessage{
     padding-top: 0.6em;
     color: #ff465a;
-}
-
-.edit{
-    margin-left: auto;
-}
-
-.edit, .delete{
-    background: transparent;
-    cursor: pointer;
-    margin-right: 1.5em;
-    border: none;
-    color: #587ef4;
 }
 
 @media screen and (max-width: 600px) {
